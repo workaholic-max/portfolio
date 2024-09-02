@@ -10,7 +10,6 @@ import LinkedInIcon from '@/components/icons/LinkedInIcon';
 import TelegramIcon from '@/components/icons/TelegramIcon';
 import InstagramIcon from '@/components/icons/InstagramIcon';
 import GoogleIcon from '@/components/icons/GoogleIcon';
-import PhoneIcon from '@/components/icons/PhoneIcon';
 import LaunchIcon from '@/components/icons/LaunchIcon';
 
 /*-----------------------------------------------------------------
@@ -46,11 +45,6 @@ const config = [
         title: 'Gmail',
         subtitle: 'lukyanmaksim@gmail.com',
         icon: { component: GoogleIcon, size: 30 },
-    },
-    {
-        title: 'Phone number',
-        subtitle: '+380 96 904 8250',
-        icon: { component: PhoneIcon, size: 33 },
     },
 ];
 </script>
