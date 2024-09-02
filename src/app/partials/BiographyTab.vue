@@ -22,7 +22,7 @@ const generalInfoConfig = [
                              Languages
 -----------------------------------------------------------------*/
 
-const languagesConfig = ['Ukrainian — Native', 'English — B2', 'Romanian — Mixed'];
+const languagesConfig = ['Ukrainian — Native', 'English — B2'];
 
 /*-----------------------------------------------------------------
                                Skills
