@@ -1,0 +1,40 @@
+@mixin btn-UI() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space;
+    background-color: $primary-color;
+    padding: $space--half $space;
+    border: 1px solid $secondary-color--transparent;
+    border-radius: $base-border-radius;
+    color: $white;
+    font-weight: 500;
+    transition: $base-transition;
+
+    &:hover {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+    }
+}
+
+@mixin block-UI($include-background: true, $include-padding: true, $border-radius: null) {
+    outline: 1px solid $primary-color;
+    border-radius: $border-radius or $base-border-radius;
+
+    @if ($include-padding) {
+        padding: $space--half;
+    }
+
+    @if ($include-background) {
+        background-color: $primary-color--transparent;
+    }
+}
+
+@mixin badge-UI() {
+    padding: $space--half $space * 1.5;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1;
+
+    @include block-UI(true, false, 100px);
+}

@@ -2,11 +2,12 @@
     -webkit-tap-highlight-color: transparent;
 
     &::selection {
-        background-color: $primary-color;
+        background-color: $tertiary-color;
     }
 
     &::-webkit-scrollbar {
         width: 10px;
+        height: 10px;
     }
 
     &::-webkit-scrollbar-track {
@@ -16,19 +17,22 @@
     &::-webkit-scrollbar-thumb {
         background-color: $primary-color;
         border: 2px solid $tertiary-color;
-        border-radius: $base-border-radius * 2;
+        border-radius: 20px;
     }
 }
 
 body {
+    height: 100%;
     background-color: $background-color;
     color: $white;
     font-family: $jura-font;
-    font-size: $base-font-size;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 300;
     letter-spacing: 0.25px;
 }
 
-small {
-    color: rgba($white, 0.325);
+#wm-app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }

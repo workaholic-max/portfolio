@@ -1,9 +1,12 @@
 /* Colors */
 $white: #ffffff;
 $background-color: #141414;
-$primary-color: #333333;
+$primary-color: #1c1c1c;
+$primary-color--transparent: #181818;
 $secondary-color: #282828;
-$tertiary-color: #1c1c1c;
+$secondary-color--transparent: #202020;
+$tertiary-color: #333333;
+$text-color: #c3c3c3;
 
 /* Fonts */
 $jura-font: 'Jura', sans-serif;
@@ -12,10 +15,9 @@ $jura-font: 'Jura', sans-serif;
 $tablet-breakpoint: 768px;
 
 /* Base properties */
-$base-font-size: 16px;
-$base-border-radius: 6px;
+$base-border-radius: 4px;
 $base-transition: all 250ms ease-in;
 
 /* Custom properties */
-$container-max-width: 1440px;
-$container-space: 20px;
+$space: 10px;
+$space--half: calc($space / 2);

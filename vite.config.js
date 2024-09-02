@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from 'url';
 
 export default defineConfig({
     plugins: [vue()],
-    base: '/portfolio/',
+    base: '/portfolio',
     resolve: {
         alias: [
             {
@@ -17,7 +17,7 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                additionalData: '@import "./src/assets/styles/variables.scss";',
+                additionalData: '@import "./src/assets/styles/index.scss";',
             },
         },
     },

@@ -1,9 +1,12 @@
-/* fade */
-.fade-enter-active {
+/* slide-down */
+.slide-down-enter-active,
+.slide-down-leave-active {
+    transform-origin: center;
     transition: $base-transition;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.slide-down-enter-from,
+.slide-down-leave-to {
     opacity: 0;
+    transform: translateY(-$space);
 }

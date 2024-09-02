@@ -22,6 +22,7 @@ h5,
 h6 {
     margin: 0;
     line-height: 1;
+    font-weight: 700;
 }
 
 p {
@@ -35,7 +36,7 @@ a {
 
 b,
 strong {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 small {
@@ -46,6 +47,7 @@ ul,
 ol {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 img {
