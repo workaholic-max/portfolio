@@ -7,6 +7,7 @@ export default {
 <script setup>
 import { computed } from 'vue';
 
+import { getRelativeImgSrc } from '@/utils/imgUtils';
 import TelegramIcon from '@/components/icons/TelegramIcon';
 import LaunchIcon from '@/components/icons/LaunchIcon';
 
@@ -30,15 +31,25 @@ const galleryConfig = computed(() => {
         'December',
     ];
 
-    const images = import.meta.glob('/src/assets/images/gallery/*.jpg');
+    const images = [
+        'photo_10.08.2024--1.jpg',
+        'photo_10.08.2024--2.jpg',
+        'photo_10.08.2024--3.jpg',
+        'photo_10.08.2024--4.jpg',
+        'photo_29.07.2024--1.jpg',
+        'photo_15.07.2024--1.jpg',
+        'photo_23.05.2024--1.jpg',
+        'photo_23.05.2024--2.jpg',
+        'photo_28.04.2024--1.jpg',
+    ];
 
-    return Object.keys(images).map((imgSrc) => {
+    return images.map((imgSrc) => {
         const [, day, month, year] = imgSrc.match(/photo_(\d{2})\.(\d{2})\.(\d{4})/);
 
         const monthName = months[month - 1];
 
         return {
-            imgSrc,
+            imgSrc: getRelativeImgSrc(`gallery/${imgSrc}`),
             date: `${day} ${monthName} ${year}`,
         };
     });
