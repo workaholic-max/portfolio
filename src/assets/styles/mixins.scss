@@ -17,13 +17,10 @@
     }
 }
 
-@mixin block-UI($include-background: true, $include-padding: true, $border-radius: null) {
+@mixin block-UI($include-background: true, $padding: null, $border-radius: null) {
+    padding: $padding or $space--half;
     outline: 1px solid $primary-color;
     border-radius: $border-radius or $base-border-radius;
-
-    @if ($include-padding) {
-        padding: $space--half;
-    }
 
     @if ($include-background) {
         background-color: $primary-color--transparent;
@@ -31,10 +28,9 @@
 }
 
 @mixin badge-UI() {
-    padding: $space--half $space * 1.5;
     text-align: center;
     font-weight: 500;
     line-height: 1;
 
-    @include block-UI(true, false, 100px);
+    @include block-UI(true, ($space--half $space * 1.5), 100px);
 }

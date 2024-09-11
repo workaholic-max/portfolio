@@ -8,10 +8,6 @@ export default {
 import { ref } from 'vue';
 
 const props = defineProps({
-    initialTab: {
-        type: [String, Number],
-        default: null,
-    },
     options: {
         type: Array,
         required: true,
@@ -23,7 +19,7 @@ const props = defineProps({
 ------------------------------------------------------------------------*/
 
 const containerRef = ref(null);
-const activeTab = ref(props.initialTab);
+const activeTab = ref(props.options[0].value);
 
 const scrollIntoTabView = (tab) => {
     const tabIndex = props.options.findIndex(({ value }) => tab === value);
@@ -69,7 +65,6 @@ const changeTab = (tab) => {
         </div>
 
         <transition
-            appear
             name="slide-down"
             type="transition"
             mode="out-in"
@@ -78,10 +73,7 @@ const changeTab = (tab) => {
                 :key="`tab content: ${activeTab}`"
                 class="wm-tabs__content"
             >
-                <slot
-                    name="content"
-                    :tab="activeTab"
-                />
+                <component :is="options[activeTab].component" />
             </div>
         </transition>
     </div>
@@ -95,13 +87,12 @@ const changeTab = (tab) => {
     &__options {
         display: flex;
         align-items: center;
-        gap: 3px;
-        padding: 3px;
+        gap: $space--sm;
         margin-bottom: $space;
         overflow-x: auto;
         z-index: 2;
 
-        @include block-UI(true, false);
+        @include block-UI(true, $space--sm);
 
         &::-webkit-scrollbar-track {
             background-color: $secondary-color;
@@ -120,7 +111,7 @@ const changeTab = (tab) => {
         border: none;
         font-size: 18px;
         font-weight: 500;
-        color: rgba($white, 0.5);
+        color: $inactive-color;
         transition: $base-transition;
 
         @media screen and (max-width: $tablet-breakpoint) {
