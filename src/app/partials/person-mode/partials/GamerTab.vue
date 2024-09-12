@@ -66,6 +66,7 @@ const config = [
         height: 150px;
         padding: $space $space--half;
         background-color: $primary-color--transparent;
+        border-radius: $base-border-radius;
 
         & > img {
             width: 75%;
