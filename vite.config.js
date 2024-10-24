@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from 'url';
 
 export default defineConfig({
     plugins: [vue()],
-    base: '/portfolio/',
+    base: '/portfolio',
     resolve: {
         alias: [
             {
