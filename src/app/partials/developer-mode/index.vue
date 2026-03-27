@@ -17,11 +17,11 @@ import ContactsTab from './partials/ContactsTab';
 -----------------------------------------------------------------*/
 
 const tabOptions = [
-    { value: 0, text: 'Biography', component: BiographyTab },
-    { value: 1, text: 'Tech Stack', component: TechStackTab },
-    { value: 2, text: 'Experience', component: ExperienceTab },
-    { value: 3, text: 'Projects', component: ProjectsTab },
-    { value: 4, text: 'Contacts', component: ContactsTab },
+    { text: 'Biography', component: BiographyTab },
+    { text: 'Tech Stack', component: TechStackTab },
+    { text: 'Experience', component: ExperienceTab },
+    { text: 'Projects', component: ProjectsTab },
+    { text: 'Contacts', component: ContactsTab },
 ];
 </script>
 

@@ -11,18 +11,16 @@ export default {
 
 const generalInfoConfig = [
     { title: 'Full Name', content: 'Maksym Lukian' },
-    { title: 'Known as', content: 'workaholic' },
-    { title: 'Years of Experience', content: 'Since December 2020' },
-    { title: 'Born', content: 'Earth, Ukraine, 2002' },
+    { title: 'Current Company', content: 'Sweet Stack Digital' },
     { title: 'Location', content: 'Ukraine, Chernivtsi' },
-    { title: 'Developing at', content: 'Sweet Stack Digital' },
+    { title: 'Work Preference', content: 'Remote' },
 ];
 
 /*-----------------------------------------------------------------
                              Languages
 -----------------------------------------------------------------*/
 
-const languagesConfig = ['Ukrainian — Native', 'English — B2'];
+const languagesConfig = ['Ukrainian — Native', 'English — B2+'];
 
 /*-----------------------------------------------------------------
                                Skills
@@ -30,22 +28,14 @@ const languagesConfig = ['Ukrainian — Native', 'English — B2'];
 
 const skillsConfig = [
     'Problem Solving',
+    'Clean Code',
     'Attention to Detail',
-    'Continuous Learning',
+    'Feature Ownership',
     'Adaptability',
-    'Creativity',
-    'Communication',
-    'Critical Thinking',
-    'Conflict Resolution',
+    'Team Collaboration',
+    'Analytical Thinking',
+    'Code Review',
 ];
-
-/*-----------------------------------------------------------------
-                             Challenges
------------------------------------------------------------------*/
-
-const currentChallengesConfig = ['Fresh UI/UX', 'Python', 'AI & ML'];
-
-const upcomingChallengesConfig = ['C++', 'GameDev', 'AI Model'];
 </script>
 
 <template>
@@ -59,13 +49,14 @@ const upcomingChallengesConfig = ['C++', 'GameDev', 'AI Model'];
             </div>
 
             <div class="wm-biography-tab__description">
-                <h2>Senior Front-End Developer</h2>
+                <h2>Senior Frontend Developer (Vue.js)</h2>
 
                 <p>
-                    Developer with almost 4 years of successful experience in web development. My strengths are good
-                    knowledge of the object-oriented approach, software engineering principles, and concepts, and high
-                    level of analytical thinking. Good team player, responsible. Always looking forward for new
-                    challenges. Fast and efficient learning is what I am all about.
+                    With 5+ years of commercial experience building scalable and maintainable web applications, I
+                    specialize in Vue.js and modern JavaScript ecosystems, focusing on state management, performance
+                    optimization, and real-time features. I write clean, efficient code and take ownership of features
+                    from idea to stable production, working closely with cross-functional teams to deliver high-quality
+                    user experiences.
                 </p>
             </div>
         </div>
@@ -105,34 +96,6 @@ const upcomingChallengesConfig = ['C++', 'GameDev', 'AI Model'];
                         :key="`skill: ${skill}`"
                     >
                         {{ skill }}
-                    </li>
-                </ul>
-            </div>
-        </article>
-
-        <article class="wm-biography-card">
-            <div class="wm-biography-card__block">
-                <h4>Current Challenges</h4>
-
-                <ul>
-                    <li
-                        v-for="challenge in currentChallengesConfig"
-                        :key="`current challenge: ${challenge}`"
-                    >
-                        {{ challenge }}
-                    </li>
-                </ul>
-            </div>
-
-            <div class="wm-biography-card__block">
-                <h4>Upcoming Challenges</h4>
-
-                <ul>
-                    <li
-                        v-for="challenge in upcomingChallengesConfig"
-                        :key="`upcoming challenge: ${challenge}`"
-                    >
-                        {{ challenge }}
                     </li>
                 </ul>
             </div>

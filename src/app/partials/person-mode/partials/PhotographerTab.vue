@@ -9,7 +9,7 @@ import { computed } from 'vue';
 
 import { getRelativeImgSrc } from '@/utils/imgUtils';
 import TelegramIcon from '@/components/icons/TelegramIcon';
-import LaunchIcon from '@/components/icons/LaunchIcon';
+import LinkCard from '@/components/LinkCard';
 
 /*-----------------------------------------------------------------
                            Gallery state
@@ -54,39 +54,22 @@ const galleryConfig = computed(() => {
         };
     });
 });
+
+/*-----------------------------------------------------------------
+                                Link
+-----------------------------------------------------------------*/
+
+const telegramChannelLink = {
+    title: 'Telegram Channel',
+    subtitle: 'gl_maks_photographer',
+    href: 'https://t.me/+7SLvtqBa3jFiZjU6',
+    icon: { component: TelegramIcon, size: 28 },
+};
 </script>
 
 <template>
     <section class="wm-photographer-tab">
-        <div class="wm-photographer-link">
-            <div class="wm-photographer-link__wrapper">
-                <div class="wm-photographer-link__icon">
-                    <TelegramIcon
-                        :width="28"
-                        :height="28"
-                    />
-                </div>
-
-                <div class="wm-photographer-link__info">
-                    <h3>Telegram Channel</h3>
-
-                    <span>gl_maks_photographer</span>
-                </div>
-            </div>
-
-            <a
-                href="https://t.me/+7SLvtqBa3jFiZjU6"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Open
-
-                <LaunchIcon
-                    :width="18"
-                    :height="18"
-                />
-            </a>
-        </div>
+        <LinkCard :link="telegramChannelLink" />
 
         <div class="wm-photographer-tab__gallery">
             <article
@@ -150,48 +133,6 @@ const galleryConfig = computed(() => {
                 color: $text-color;
             }
         }
-    }
-}
-
-.wm-photographer-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: $space;
-
-    @include block-UI();
-
-    &__wrapper {
-        display: flex;
-        align-items: center;
-        gap: $space;
-    }
-
-    &__icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 46px;
-        width: 46px;
-        background-color: $primary-color;
-        margin: -$space--half;
-        margin-right: 0;
-        padding: $space--half;
-        border-radius: $base-border-radius 0 0 $base-border-radius;
-    }
-
-    &__info {
-        & > h3 {
-            font-size: 18px;
-        }
-
-        & > span {
-            color: $text-color;
-        }
-    }
-
-    & > a {
-        @include btn-UI();
     }
 }
 </style>

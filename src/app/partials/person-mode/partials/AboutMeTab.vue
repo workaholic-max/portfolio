@@ -32,9 +32,6 @@ const favoriteMusicBandsConfig = [
     'Sum 41',
     'Thousand Foot Krutch',
     'Breaking Benjamin',
-    'Noize MC',
-    'Oxxxymiron',
-    'Pornofilmy',
 ];
 
 /*-----------------------------------------------------------------
@@ -47,11 +44,8 @@ const favoriteMoviesConfig = [
     'Whiplash',
     'House',
     'American Hangman',
-    'The Dark Knight',
     'Ex Machina',
-    'American History X',
     'Warcraft',
-    'The Ledge',
 ];
 </script>
 
@@ -69,8 +63,8 @@ const favoriteMoviesConfig = [
                 <h2>Maksym Lukian</h2>
 
                 <p>
-                    A human with 22 years of successful existence on Earth, born in Ukraine, Chernivtsi, on 1 May 2002.
-                    Currently thriving as a Front-End Developer, recognized for a calm, objective mindset and driven by
+                    A human with 24 years of successful existence on Earth, born in Ukraine, Chernivtsi, on 1 May 2002.
+                    Currently thriving as a Frontend Developer, recognized for a calm, objective mindset and driven by
                     a passion for continuous learning, constantly seeking opportunities to grow.
                 </p>
             </div>

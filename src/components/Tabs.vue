@@ -7,7 +7,7 @@ export default {
 <script setup>
 import { ref } from 'vue';
 
-const props = defineProps({
+defineProps({
     options: {
         type: Array,
         required: true,
@@ -19,11 +19,9 @@ const props = defineProps({
 ------------------------------------------------------------------------*/
 
 const containerRef = ref(null);
-const activeTab = ref(props.options[0].value);
+const activeTabIndex = ref(0);
 
-const scrollIntoTabView = (tab) => {
-    const tabIndex = props.options.findIndex(({ value }) => tab === value);
-
+const scrollIntoTabView = (tabIndex) => {
     const tabEl = containerRef.value.children[tabIndex];
 
     const containerLeft = containerRef.value.getBoundingClientRect().left;
@@ -37,10 +35,10 @@ const scrollIntoTabView = (tab) => {
     });
 };
 
-const changeTab = (tab) => {
-    activeTab.value = tab;
+const changeTab = (tabIndex) => {
+    activeTabIndex.value = tabIndex;
 
-    scrollIntoTabView(tab);
+    scrollIntoTabView(tabIndex);
 };
 </script>
 
@@ -51,14 +49,14 @@ const changeTab = (tab) => {
             class="wm-tabs__options"
         >
             <button
-                v-for="{ value, text } in options"
-                :key="`tab option: ${value}`"
+                v-for="({ text }, tabIndex) in options"
+                :key="`tab option: ${tabIndex}`"
                 type="button"
                 class="wm-tabs__option"
                 :class="{
-                    'wm-tabs__option--active': activeTab === value,
+                    'wm-tabs__option--active': activeTabIndex === tabIndex,
                 }"
-                @click="changeTab(value)"
+                @click="changeTab(tabIndex)"
             >
                 {{ text }}
             </button>
@@ -70,10 +68,10 @@ const changeTab = (tab) => {
             mode="out-in"
         >
             <div
-                :key="`tab content: ${activeTab}`"
+                :key="`tab content: ${activeTabIndex}`"
                 class="wm-tabs__content"
             >
-                <component :is="options[activeTab].component" />
+                <component :is="options[activeTabIndex].component" />
             </div>
         </transition>
     </div>

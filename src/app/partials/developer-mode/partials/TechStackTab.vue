@@ -10,11 +10,11 @@ export default {
 -----------------------------------------------------------------*/
 
 const config = [
-    { label: 'Expert', stack: ['Vue', 'React', 'JavaScript', 'HTML', 'CSS'] },
-    { label: 'Skilled', stack: ['Vuex', 'Redux', 'SCSS', 'UI/UX'] },
-    { label: 'Familiar', stack: ['Docker', 'Vite', 'Websockets', 'Firebase'] },
-    { label: 'Beginner', stack: ['Typescript', 'Python'] },
-    { label: 'Prefer to Avoid', stack: ['Bootstrap', 'Tailwind', 'PrimeVue', 'WordPress'] },
+    { label: 'Expert', stack: ['Vue.js', 'Vuex', 'JavaScript', 'HTML', 'CSS / SCSS'] },
+    { label: 'Skilled', stack: ['Typescript', 'Pinia', 'Vite', 'UI/UX'] },
+    { label: 'Familiar', stack: ['React', 'Docker', 'Websockets', 'Firebase'] },
+    { label: 'Beginner', stack: ['Nuxt.js', 'Python'] },
+    { label: 'Prefer to Avoid', stack: ['Tailwind', 'Bootstrap', 'PrimeVue'] },
 ];
 </script>
 

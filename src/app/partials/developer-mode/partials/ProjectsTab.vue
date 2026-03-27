@@ -5,8 +5,9 @@ export default {
 </script>
 
 <script setup>
-import { getRelativeImgSrc } from '@/utils/imgUtils';
 import LaunchIcon from '@/components/icons/LaunchIcon';
+import GitHubIcon from '@/components/icons/GitHubIcon';
+import LinkCard from '@/components/LinkCard';
 
 /*-----------------------------------------------------------------
                            General state
@@ -14,61 +15,80 @@ import LaunchIcon from '@/components/icons/LaunchIcon';
 
 const config = [
     {
-        title: 'My Movie Diary',
-        link: 'https://my-movie-diary--wm.web.app',
-        logoSrc: 'MMD.png',
+        title: 'Architecture',
+        repositoryLink: 'https://github.com/workaholic-max/architecture#readme',
         description:
-            'Developed  a platform for movie enthusiasts to discover, track, and share their favorite films. The app allows users to search for movies, mark them as favorites, watched, or add them to a wishlist. It also features a community-driven section showcasing the most popular movies, chosen by user votes and  features for connecting with friends and sharing movie experiences.',
+            'A scalable architecture solution for Vue applications, designed for long-term maintainability, clear boundaries, predictable structure, and high codebase readability.',
+    },
+
+    {
+        title: 'Alphabet',
+        websiteLink: 'https://workaholic-max.github.io/alphabet/',
+        description:
+            'A structured representation of my developer mindset, using an A–Z system of principles designed to communicate how I approach building scalable, maintainable systems.',
+    },
+
+    {
+        title: 'My Movie Diary',
+        websiteLink: 'https://my-movie-diary--wm.web.app',
+        description:
+            'A web application for discovering, tracking, and organizing movies, with features for search, personal lists (favorites, watched, wishlist), and community-driven rankings. Includes user interactions, social features, and a structured system for managing movie-related data and user preferences.',
         stack: ['Vue', 'Vuex', 'SCSS', 'Vite', 'Firebase'],
     },
 ];
+
+/*-----------------------------------------------------------------
+                                Link
+-----------------------------------------------------------------*/
+
+const githubLink = {
+    title: 'GitHub',
+    subtitle: 'workaholic-max',
+    href: 'https://github.com/workaholic-max',
+    icon: { component: GitHubIcon, size: 33 },
+};
 </script>
 
 <template>
     <section class="wm-projects-tab">
+        <LinkCard :link="githubLink" />
+
+        <h2>Public Repositories</h2>
+
         <article
-            v-for="{ title, link, logoSrc, description, stack } in config"
+            v-for="{ title, repositoryLink, websiteLink, description, stack } in config"
             :key="`project: ${title}`"
             class="wm-project-card"
         >
-            <aside>
-                <img
-                    :src="getRelativeImgSrc(`projects/${logoSrc}`)"
-                    :alt="`${title} logo`"
-                />
-            </aside>
+            <header>
+                <h3>{{ title }}</h3>
 
-            <div class="wm-project-card__wrapper">
-                <header>
-                    <h3>{{ title }}</h3>
+                <a
+                    :href="repositoryLink || websiteLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {{ repositoryLink ? 'View Repository' : 'Launch' }}
 
-                    <a
-                        :href="link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Launch
+                    <LaunchIcon
+                        :width="18"
+                        :height="18"
+                    />
+                </a>
+            </header>
 
-                        <LaunchIcon
-                            :width="18"
-                            :height="18"
-                        />
-                    </a>
-                </header>
+            <p>
+                {{ description }}
+            </p>
 
-                <p>
-                    {{ description }}
-                </p>
-
-                <ul>
-                    <li
-                        v-for="name in stack"
-                        :key="`stack name: ${name}`"
-                    >
-                        {{ name }}
-                    </li>
-                </ul>
-            </div>
+            <ul v-if="stack?.length">
+                <li
+                    v-for="name in stack"
+                    :key="`stack name: ${name}`"
+                >
+                    {{ name }}
+                </li>
+            </ul>
         </article>
     </section>
 </template>
@@ -78,85 +98,51 @@ const config = [
     display: flex;
     flex-direction: column;
     gap: $space;
+
+    & > h2 {
+        margin: $space 0;
+        text-align: center;
+    }
 }
 
 .wm-project-card {
     display: flex;
-    gap: $space--half;
+    flex-direction: column;
 
     @include block-UI(false);
 
-    @media screen and (max-width: $tablet-breakpoint) {
-        flex-direction: column;
-    }
-
-    & > aside {
-        flex: 0 0 125px;
+    & > header {
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: $space--half;
-        margin: -$space--half;
-        margin-right: 0;
+        justify-content: space-between;
+        margin-bottom: $space--half;
 
-        @include block-UI(true, null, (4px 0 0 4px));
+        @include block-UI(true, ($space--sm $space--sm $space--sm $space--half));
 
-        @media screen and (max-width: $tablet-breakpoint) {
-            flex: 1 1 auto;
-            padding: $space;
-            margin: -$space--half;
-            margin-bottom: 0;
-            border-radius: $base-border-radius $base-border-radius 0 0;
+        & > h3 {
+            font-size: 20px;
         }
 
-        & > img {
-            width: 90px;
-            object-fit: contain;
-            border-radius: $base-border-radius;
-
-            @media screen and (max-width: $tablet-breakpoint) {
-                width: 75px;
-            }
+        & > a {
+            @include btn-UI();
         }
     }
 
-    &__wrapper {
+    & > p {
+        color: $text-color;
+
+        @include block-UI();
+    }
+
+    & > ul {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $space--half;
+        margin-top: $space--half;
 
-        & > header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: $space--half;
-
-            @include block-UI(true, ($space--sm $space--sm $space--sm $space--half));
-
-            & > h3 {
-                font-size: 20px;
-            }
-
-            & > a {
-                @include btn-UI();
-            }
-        }
-
-        & > p {
-            color: $text-color;
-
-            @include block-UI();
-        }
-
-        & > ul {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: $space--half;
-            margin-top: $space--half;
-
-            & > li {
-                @include badge-UI();
-            }
+        & > li {
+            @include badge-UI();
         }
     }
 }

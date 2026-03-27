@@ -14,9 +14,9 @@ const config = [
         startDate: 'April 2023',
         endDate: 'Present',
         companyName: 'Sweet Stack Digital',
-        position: 'Senior Front-End Developer',
+        position: 'Senior Frontend Developer',
         description:
-            'Created an intuitive platform to enhance internal operations for a restaurant network, focusing on centralized order management, team coordination, and inventory tracking. The solution incorporated advanced features like real-time tracking of leftovers, production, and packing processes, all within a minimalistic, user-friendly interface.',
+            'Worked on multiple frontend projects within a product-focused environment. Led development of an internal platform for a restaurant network, focusing on centralized order management, team coordination, and inventory tracking. The solution incorporated advanced features like real-time tracking of leftovers, production, and packing processes, all within a minimalistic, user-friendly interface.',
         stack: ['Vue', 'Vuex', 'SCSS', 'Docker', 'Websockets', 'Vite'],
     },
 
