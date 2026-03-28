@@ -15,8 +15,20 @@ const config = [
         endDate: 'Present',
         companyName: 'Sweet Stack Digital',
         position: 'Senior Frontend Developer',
-        description:
-            'Worked on multiple frontend projects within a product-focused environment. Led development of an internal platform for a restaurant network, focusing on centralized order management, team coordination, and inventory tracking. The solution incorporated advanced features like real-time tracking of leftovers, production, and packing processes, all within a minimalistic, user-friendly interface.',
+        description: 'Led development of multiple frontend projects from scratch.',
+        highlights: [
+            'Architected scalable frontend applications using Vue ecosystem',
+            'Took ownership of feature development from requirements to deliver',
+            'Collaborated with clients to define requirements, shape implementation decisions, and proactively propose improvements aligned with product goals',
+            'Supported and improved production applications, ensuring stability and performance based on real user feedback and usage patterns',
+            'Mentored developers and contributed to code quality through guidance',
+            'Migrated from Webpack to Vite, improving development and build performance',
+            'Transitioned from npm to pnpm for better dependency handling',
+            'Implemented real-time features using WebSockets for live data updates',
+            'Integrated external services including OpenAI and third-party APIs',
+            'Worked across multiple UI stacks (Tailwind, PrimeVue) depending on project',
+            'Improved developer experience and deployment workflows using Docker',
+        ],
         stack: ['Vue', 'Vuex', 'SCSS', 'Docker', 'Websockets', 'Vite'],
     },
 
@@ -25,8 +37,14 @@ const config = [
         endDate: 'April 2023',
         companyName: 'Sweet Stack Digital',
         position: 'Middle-Strong React Developer',
-        description:
-            'Complex system that offers travel concierge services along with access to exclusive offers to hotels and resorts worldwide. Under the hood, it combines state-of-the-art CRM system for travel stylists, sophisticated scoring and suggestion algorithms, multiple third party API integrations and a booking engine that crunches millions of pieces of data daily.',
+        description: 'High-load travel platform with complex booking flows.',
+        highlights: [
+            'Developed complex, data-driven UI features and business-critical flows',
+            'Integrated multiple third-party APIs and handled asynchronous data processing',
+            'Managed and structured application state for scalability and maintainability',
+            'Configured and optimized Webpack build setup for development and production',
+            'Improved performance and reliability of the application under high data load',
+        ],
         stack: ['React', 'Redux', 'SCSS', 'Docker'],
     },
 
@@ -35,8 +53,14 @@ const config = [
         endDate: 'February 2022',
         companyName: 'EPAM',
         position: 'Middle React Developer',
-        description:
-            'Section based CMS system that allows its customers to create large company websites and blogs acting like an ecosystem of reusable components and data inputs. Mostly focused on better user experience both for visitors and for content manages using eye catching soft design and smooth animations.',
+        description: 'Component-driven CMS platform for building dynamic websites and blogs.',
+        highlights: [
+            'Developed and maintained modular, reusable component architecture',
+            'Implemented complex UI features and interactive user flows',
+            'Built and maintained type-safe code using TypeScript',
+            'Managed application state using Redux in a scalable way',
+            'Integrated and handled REST APIs with proper data flow control',
+        ],
         stack: ['React', 'Redux', 'Typescript'],
     },
 
@@ -45,8 +69,13 @@ const config = [
         endDate: 'June 2021',
         companyName: 'EPAM',
         position: 'Junior React Developer',
-        description:
-            'Application for large retailer companies help to organize business process monitoring. Includes warehouse tracking, orders and shipping management, paying and credit memo record of company vendor and retailers.',
+        description: 'Enterprise retail system for warehouse tracking and order processing.',
+        highlights: [
+            'Built reusable components using React and Redux',
+            'Implemented pixel-perfect UI based on design specifications',
+            'Integrated REST APIs for core data flows',
+            'Collaborated within a team following established development practices',
+        ],
         stack: ['React', 'Redux', 'Bootstrap'],
     },
 ];
@@ -55,7 +84,7 @@ const config = [
 <template>
     <section class="wm-experience-tab">
         <article
-            v-for="{ startDate, endDate, companyName, position, description, stack } in config"
+            v-for="{ startDate, endDate, companyName, position, description, highlights, stack } in config"
             :key="`experience: ${startDate}`"
             class="wm-experience-card"
         >
@@ -74,7 +103,18 @@ const config = [
                     {{ description }}
                 </p>
 
-                <ul>
+                <div class="wm-experience-card__highlights">
+                    <ul>
+                        <li
+                            v-for="(highlight, index) in highlights"
+                            :key="index"
+                        >
+                            {{ highlight }}
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="wm-experience-card__stack">
                     <li
                         v-for="name in stack"
                         :key="`stack name: ${name}`"
@@ -135,6 +175,8 @@ const config = [
     &__wrapper {
         display: flex;
         flex-direction: column;
+        gap: $space--half;
+        width: 100%;
 
         & > header {
             display: flex;
@@ -149,19 +191,34 @@ const config = [
 
         & > p {
             color: $text-color;
-            margin: $space--half 0;
 
             @include block-UI();
         }
+    }
 
-        & > ul {
+    &__stack {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $space--half;
+
+        & > li {
+            @include badge-UI();
+        }
+    }
+
+    &__highlights {
+        @include block-UI();
+
+        > ul {
             display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: $space--half;
+            flex-direction: column;
+            gap: 8px;
+            padding-left: 20px;
 
             & > li {
-                @include badge-UI();
+                list-style: disc;
+                line-height: 1.25;
             }
         }
     }
