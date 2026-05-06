@@ -60,7 +60,7 @@ const config = [
     },
     {
         question: 'Any degree?',
-        answer: "Bachelor's degree in Publishing and Printing, Yuriy Fedkovych Chernivtsi National University",
+        answer: "Master's Degree in Publishing and Printing, Yuriy Fedkovych Chernivtsi National University",
     },
     {
         question: 'What languages do you know?',
