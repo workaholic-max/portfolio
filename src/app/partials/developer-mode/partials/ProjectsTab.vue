@@ -18,7 +18,7 @@ const config = [
         title: 'Architecture',
         repositoryLink: 'https://github.com/workaholic-max/architecture#readme',
         description:
-            'A scalable architecture solution for Vue applications, designed for long-term maintainability, clear boundaries, predictable structure, and high codebase readability.',
+            'A reference architecture for Vue 3 applications (TypeScript, Vite, Pinia, Vue Router) that scales from small to large projects. Code is organized into clear layers — app, domains, features, shared, api, router — with import boundaries enforced by ESLint for long-term maintainability, predictable structure, and high readability.',
     },
 
     {
