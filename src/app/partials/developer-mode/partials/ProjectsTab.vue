@@ -27,14 +27,6 @@ const config = [
         description:
             'A structured representation of my developer mindset, using an A–Z system of principles designed to communicate how I approach building scalable, maintainable systems.',
     },
-
-    {
-        title: 'My Movie Diary',
-        websiteLink: 'https://my-movie-diary--wm.web.app',
-        description:
-            'A web application for discovering, tracking, and organizing movies, with features for search, personal lists (favorites, watched, wishlist), and community-driven rankings. Includes user interactions, social features, and a structured system for managing movie-related data and user preferences.',
-        stack: ['Vue', 'Vuex', 'SCSS', 'Vite', 'Firebase'],
-    },
 ];
 
 /*-----------------------------------------------------------------
