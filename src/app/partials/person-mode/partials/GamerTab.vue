@@ -14,10 +14,10 @@ import { getRelativeImgSrc } from '@/utils/imgUtils';
 const config = [
     { name: 'World of Warcraft', logoSrc: 'WoW.png' },
     { name: 'Hearthstone', logoSrc: 'Hearthstone.png' },
+    { name: 'Overwatch', logoSrc: 'Overwatch.png' },
     { name: 'Heroes of the Storm', logoSrc: 'HOTS.png' },
     { name: 'Valorant', logoSrc: 'Valorant.png' },
-    { name: 'Apex Legends', logoSrc: 'Apex-Legends.png' },
-    { name: 'Fall Guys', logoSrc: 'Fall-Guys.png' }
+    { name: 'Fall Guys', logoSrc: 'Fall-Guys.png' },
 ];
 </script>
 

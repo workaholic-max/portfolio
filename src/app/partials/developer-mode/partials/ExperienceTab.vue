@@ -18,7 +18,7 @@ const config = [
         description: 'Led development of multiple frontend projects from scratch.',
         highlights: [
             'Architected scalable frontend applications using Vue ecosystem',
-            'Took ownership of feature development from requirements to deliver',
+            'Took ownership of feature development from requirements to delivery',
             'Collaborated with clients to define requirements, shape implementation decisions, and proactively propose improvements aligned with product goals',
             'Supported and improved production applications, ensuring stability and performance based on real user feedback and usage patterns',
             'Mentored developers and contributed to code quality through guidance',
@@ -51,7 +51,7 @@ const config = [
     {
         startDate: 'June 2021',
         endDate: 'February 2022',
-        companyName: 'EPAM',
+        companyName: 'NDA',
         position: 'Middle React Developer',
         description: 'Component-driven CMS platform for building dynamic websites and blogs.',
         highlights: [
@@ -67,7 +67,7 @@ const config = [
     {
         startDate: 'December 2020',
         endDate: 'June 2021',
-        companyName: 'EPAM',
+        companyName: 'NDA',
         position: 'Junior React Developer',
         description: 'Enterprise retail system for warehouse tracking and order processing.',
         highlights: [

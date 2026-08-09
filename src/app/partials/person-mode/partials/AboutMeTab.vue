@@ -6,6 +6,26 @@ export default {
 
 <script setup>
 /*-----------------------------------------------------------------
+                                Age
+-----------------------------------------------------------------*/
+
+const BIRTH_YEAR = 2002;
+const BIRTH_MONTH = 4; // May
+const BIRTH_DAY = 1;
+
+const age = (() => {
+    const today = new Date();
+
+    let years = today.getFullYear() - BIRTH_YEAR;
+
+    if (today.getMonth() < BIRTH_MONTH || (today.getMonth() === BIRTH_MONTH && today.getDate() < BIRTH_DAY)) {
+        years--;
+    }
+
+    return years;
+})();
+
+/*-----------------------------------------------------------------
                              Interests
 -----------------------------------------------------------------*/
 
@@ -63,9 +83,9 @@ const favoriteMoviesConfig = [
                 <h2>Maksym Lukian</h2>
 
                 <p>
-                    A human with 24 years of successful existence on Earth, born in Ukraine, Chernivtsi, on 1 May 2002.
-                    Currently thriving as a Frontend Developer, recognized for a calm, objective mindset and driven by
-                    a passion for continuous learning, constantly seeking opportunities to grow.
+                    A human with {{ age }} years of successful existence on Earth, born in Ukraine, Chernivtsi, on 1 May
+                    2002. Currently thriving as a Frontend Developer, recognized for a calm, objective mindset and
+                    driven by a passion for continuous learning, constantly seeking opportunities to grow.
                 </p>
             </div>
         </div>

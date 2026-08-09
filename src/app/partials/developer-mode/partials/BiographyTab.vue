@@ -5,6 +5,19 @@ export default {
 </script>
 
 <script setup>
+import FileIcon from '@/components/icons/FileIcon';
+import LinkCard from '@/components/LinkCard';
+
+/*-----------------------------------------------------------------
+                                CV
+-----------------------------------------------------------------*/
+const cvLink = {
+    title: 'CV',
+    subtitle: 'For more information',
+    href: `${import.meta.env.BASE_URL.replace(/\/$/, '')}/maksym-lukian-cv.pdf`,
+    icon: { component: FileIcon, size: 24 },
+};
+
 /*-----------------------------------------------------------------
                             General info
 -----------------------------------------------------------------*/
@@ -60,6 +73,8 @@ const skillsConfig = [
                 </p>
             </div>
         </div>
+
+        <LinkCard :link="cvLink" />
 
         <article class="wm-biography-card">
             <div
