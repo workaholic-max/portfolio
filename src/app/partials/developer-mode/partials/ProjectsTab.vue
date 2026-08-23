@@ -15,6 +15,13 @@ import LinkCard from '@/components/LinkCard';
 
 const config = [
     {
+        title: 'Dev Lab',
+        repositoryLink: 'https://github.com/workaholic-max/dev-lab#readme',
+        description:
+            'A public record of the code worth keeping and the practices behind it — real, reusable pieces pulled from my TypeScript / Vue 3 projects, documented with the actual reasoning and trade-offs behind each one, plus the Claude Code toolkit I use to build all of it efficiently.',
+    },
+
+    {
         title: 'Architecture',
         repositoryLink: 'https://github.com/workaholic-max/architecture#readme',
         description:
