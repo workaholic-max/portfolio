@@ -29,7 +29,7 @@ const config = [
             'Worked across multiple UI stacks (Tailwind, PrimeVue) depending on project',
             'Improved developer experience and deployment workflows using Docker',
         ],
-        stack: ['Vue', 'Vuex', 'SCSS', 'Docker', 'Websockets', 'Vite'],
+        stack: ['Vue', 'Vuex', 'SCSS', 'Docker', 'WebSockets', 'Vite'],
     },
 
     {

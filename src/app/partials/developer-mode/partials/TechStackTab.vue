@@ -12,7 +12,7 @@ export default {
 const config = [
     { label: 'Expert', stack: ['Vue.js', 'Pinia / Vuex', 'JavaScript', 'HTML', 'CSS / SCSS'] },
     { label: 'Skilled', stack: ['Typescript', 'Tailwind', 'Vite', 'UI/UX'] },
-    { label: 'Familiar', stack: ['Websockets', 'Docker', 'PrimeVue', 'Bootstrap', 'Firebase', 'React'] },
+    { label: 'Familiar', stack: ['WebSockets', 'Docker', 'PrimeVue', 'Bootstrap', 'Firebase', 'React'] },
     { label: 'Beginner', stack: ['Nuxt.js', 'Python'] },
     { label: 'Prefer to Avoid', stack: ['WordPress'] },
 ];
