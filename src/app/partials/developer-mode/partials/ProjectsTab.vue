@@ -25,7 +25,7 @@ const config = [
         title: 'Architecture',
         repositoryLink: 'https://github.com/workaholic-max/architecture#readme',
         description:
-            'A reference architecture for Vue 3 applications (TypeScript, Vite, Pinia, Vue Router) that scales from small to large projects. Code is organized into clear layers — app, domains, features, shared, api, router — with import boundaries enforced by ESLint for long-term maintainability, predictable structure, and high readability.',
+            'A reference architecture for Vue 3 applications — built with TypeScript, Vite, Pinia, SCSS, and Progressive Web App support — with ESLint-enforced boundaries, tests, and CI for long-term maintainability, predictable structure, and high codebase readability.',
     },
 
     {
