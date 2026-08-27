@@ -24,12 +24,13 @@ const config = [
             'Mentored developers and contributed to code quality through guidance',
             'Migrated from Webpack to Vite, improving development and build performance',
             'Transitioned from npm to pnpm for better dependency handling',
+            'Led the migration of state management from Vuex to Pinia across the codebase',
             'Implemented real-time features using WebSockets for live data updates',
             'Integrated external services including OpenAI and third-party APIs',
             'Worked across multiple UI stacks (Tailwind, PrimeVue) depending on project',
             'Improved developer experience and deployment workflows using Docker',
         ],
-        stack: ['Vue', 'Vuex', 'SCSS', 'Docker', 'WebSockets', 'Vite'],
+        stack: ['Vue', 'Pinia / VueX', 'SCSS', 'Docker', 'WebSockets', 'Vite'],
     },
 
     {

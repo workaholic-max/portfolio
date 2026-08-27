@@ -10,11 +10,30 @@ export default {
 -----------------------------------------------------------------*/
 
 const config = [
-    { label: 'Expert', stack: ['Vue.js', 'Pinia / Vuex', 'JavaScript', 'HTML', 'CSS / SCSS'] },
-    { label: 'Skilled', stack: ['Typescript', 'Tailwind', 'Vite', 'UI/UX'] },
-    { label: 'Familiar', stack: ['WebSockets', 'Docker', 'PrimeVue', 'Bootstrap', 'Firebase', 'React'] },
-    { label: 'Beginner', stack: ['Nuxt.js', 'Python'] },
-    { label: 'Prefer to Avoid', stack: ['WordPress'] },
+    {
+        label: 'Expert',
+        stack: ['Vue.js', 'JavaScript', 'Pinia / Vuex', 'HTML / CSS / SCSS'],
+    },
+    {
+        label: 'Skilled',
+        stack: ['TypeScript', 'Tailwind CSS', 'Frontend Architecture', 'Vite', 'UI/UX', 'PWA'],
+    },
+    {
+        label: 'Familiar',
+        stack: ['AI-assisted development', 'WebSockets', 'Docker', 'i18n', 'Motion', 'PrimeVue', 'React'],
+    },
+    {
+        label: 'Beginner',
+        stack: ['Nuxt.js', 'Python'],
+    },
+    {
+        label: 'Theoretical',
+        stack: ['Unit Tests / Vitest', 'Web Vitals', 'Form validation', 'TanStack Query'],
+    },
+    {
+        label: 'Exploring',
+        stack: ['Accessibility', 'Storybook', 'Vuetify'],
+    },
 ];
 </script>
 
