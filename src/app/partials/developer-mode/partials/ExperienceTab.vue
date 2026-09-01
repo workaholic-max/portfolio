@@ -15,7 +15,7 @@ const config = [
         endDate: 'Present',
         companyName: 'Sweet Stack Digital',
         position: 'Senior Frontend Developer',
-        description: 'Led development of multiple frontend projects from scratch.',
+        description: 'Delivered Vue.js frontend applications across multiple client projects, from architecture through production.',
         highlights: [
             'Architected scalable frontend applications using Vue ecosystem',
             'Took ownership of feature development from requirements to delivery',

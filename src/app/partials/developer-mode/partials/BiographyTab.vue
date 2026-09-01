@@ -25,7 +25,7 @@ const cvLink = {
 const generalInfoConfig = [
     { title: 'Full Name', content: 'Maksym Lukian' },
     { title: 'Current Company', content: 'Sweet Stack Digital' },
-    { title: 'Location', content: 'Ukraine, Chernivtsi' },
+    { title: 'Location', content: 'Chernivtsi, Ukraine' },
     { title: 'Work Preference', content: 'Remote' },
 ];
 
@@ -65,11 +65,11 @@ const skillsConfig = [
                 <h2>Senior Frontend Developer (Vue.js)</h2>
 
                 <p>
-                    With 5+ years of commercial experience building scalable and maintainable web applications, I
-                    specialize in Vue.js and modern JavaScript ecosystems, focusing on state management, performance
-                    optimization, and real-time features. I write clean, efficient code and take ownership of features
-                    from idea to stable production, working closely with cross-functional teams to deliver high-quality
-                    user experiences.
+                    With 5+ years of commercial frontend experience, including 3+ years specializing in Vue.js and its
+                    modern ecosystem, I build scalable and maintainable web applications with a focus on state
+                    management, performance optimization, and real-time features. I write clean, efficient code and take
+                    ownership of features from idea to stable production, working closely with cross-functional teams to
+                    deliver high-quality user experiences.
                 </p>
             </div>
         </div>
