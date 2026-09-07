@@ -28,11 +28,11 @@ const config = [
     },
     {
         label: 'Theoretical',
-        stack: ['Unit Tests / Vitest', 'Web Vitals', 'Form validation', 'TanStack Query'],
+        stack: ['Unit Tests / Vitest', 'Web Vitals', 'Storybook'],
     },
     {
         label: 'Exploring',
-        stack: ['Accessibility', 'Storybook', 'Vuetify'],
+        stack: ['Accessibility', 'Vuetify'],
     },
 ];
 </script>
